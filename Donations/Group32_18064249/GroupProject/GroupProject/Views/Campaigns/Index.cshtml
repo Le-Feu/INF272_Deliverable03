@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GroupProject.Models.Campaign>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CampaignDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CampaignStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CampaignDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CampaignStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CampaignID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CampaignID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CampaignID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "BankOrganisation";
+}
+
+<h2>Transfer to the Organisation:</h2>
+
+<div>
+    <h4>Banking details: </h4>
+    <form>
+        @Html.Label("cardNo", "Card Number")
+        <input type="number" required="required" /><br />
+        @Html.Label("carvCVV", "CVV")
+        <input type="text" required="required" /><br />
+        @Html.Label("cardPassword", "Password")
+        <input type="number" required="required" /><br />
+        <button onclick="myFunction()">CONFIRM</button>
+    </form>
+</div>
+<script>
+    function myFunction()
+    {
+        alert("An OTP has been sent to your email");
+        window.location.href = '@Url.Action("OtpConfirmation","Donation")';
+    }
+</script>

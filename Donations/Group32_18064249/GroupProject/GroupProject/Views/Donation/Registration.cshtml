@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.title ="Register";
+}
+
+<title>Register</title>
+
+<div>
+    <h2>Register</h2>
+    <h3><i>Easily register yourself to be able to donate</i></h3>
+</div>
+
+<div>
+    <h4>Fill in your details: </h4>
+    @Html.Label("Fname", "First Name: ")
+    @Html.TextBox("name", null, new { @class = "form-content", required = "required" })<br />
+    @Html.Label("Lname", "Last Name: ")
+    @Html.TextBox("surname", null, new { @class = "form-content", required = "required" })<br />
+    @Html.Label("email", "Email: ")
+    @Html.TextBox("email", null, new { @class = "form-content", required = "required" })<br />
+    @Html.Label("password", "Password: ")
+    @Html.Password("password", null, new { @class = "forn-content", required = "required" })<br />
+    @Html.Label("confirmPassword", "Confirm Password: ")
+    @Html.TextBox("ConfirmPassword", null, new { @class = "form-content", required = "required" })<br />
+
+    <button onclick="location.href='@Url.Action("LogIn","Donation")'">Submit</button>
+</div>
+

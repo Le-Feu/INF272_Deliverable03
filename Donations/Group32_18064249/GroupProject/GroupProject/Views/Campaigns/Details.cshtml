@@ -1,0 +1,35 @@
+﻿@model GroupProject.Models.Campaign
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Campaign</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CampaignDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CampaignDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CampaignStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CampaignStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CampaignID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.title ="LogIn";
+}
+
+<title>log-in/Register</title>
+
+
+<h2>Have an account?</h2>
+
+<div>
+    <h3>Log-In</h3>
+    @Html.Label("username", "Email: ")
+    @Html.TextBox("username", null, new { @class = "form-content" })<br />
+    @Html.Label("password", "Password: ")
+    @Html.Password("password", null, new { @class = "form-content" })
+    <button onclick="location.href='@Url.Action("MakeDonation","Donation")'">Submit</button>
+    <br />
+    <p> Don't have an account yet? Easily,  @Html.ActionLink("Register here","Registration","Donation")</p>
+</div>
+

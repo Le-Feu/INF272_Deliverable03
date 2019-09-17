@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.title ="Donate";
+}
+
+<<title>Donate</title>
+
+<div class="well">
+    <h1>Donate And Make your change</h1>
+    <h3><i>Make your change!!</i></h3>
+    <p>Easily indicate the amount of money you would like to donate and select submit</p>
+</div>
+<div>
+    <input type="radio" name="amount" /><label> R50 </label>
+    <input type="radio" name="amount" /><label> R100 </label>
+    <input type="radio" name="amount" /><label> R150 </label><br\>
+    <input type="radio" name="amount" /><label> R200 </label>
+    <input type="radio" name="amount" /><label> R500 </label>
+    <input type="radio" name="amount" /><label> R1000 </label><br />
+    @Html.Label("OwnAmount","Please indicate own amount: ")
+    <input type="number" name="amount" /><br />
+    <button onclick="location.href='@Url.Action("BankDetails","Donation")'">Submit</button>
+</div>
+

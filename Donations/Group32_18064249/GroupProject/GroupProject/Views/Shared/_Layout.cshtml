@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Donation for Hope", "Home", "Donation", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Home", "Donation")</li>
+                    <li>@Html.ActionLink("Donate", "LogIn", "Donation")</li>
+                    <li>@Html.ActionLink("How To Donate", "HowToDonate", "Donation")</li>
+                    <li>@Html.ActionLink("More Info", "Info", "Donation")</li>
+                    <li>@Html.ActionLink("Profile", "UserProfile", "Donation")</li>
+                    <li>@Html.ActionLink("Donors", "Index", "Donors")</li>
+                    <li>@Html.ActionLink("Organisations", "Index", "Organisations")</li>
+                    <li>@Html.ActionLink("Campaigns", "Index", "Campaigns")</li>
+                    <li>@Html.ActionLink("Payments", "Index", "Payments")</li>
+
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - 2019(c)copyright of a group project by students of the <i>University of Pretoria (R)</i>. Terms and condition apply where applicable. Sigcino Sizwe The Man</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

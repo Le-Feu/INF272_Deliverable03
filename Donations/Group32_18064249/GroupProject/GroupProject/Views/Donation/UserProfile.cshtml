@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "UserProfile";
+}
+
+<h2>Profile</h2>
+
+<div>
+    @Html.Label("fname", "Name: ")
+    @Html.Label("fname", "Zafreen Gugu")<br /><br />
+    @Html.Label("Lname", "Last Name: ")
+    @Html.Label("fname", "Ngcobo")<br /><br />
+    @Html.Label("Email", "Email: ")
+    @Html.Label("Email", "tshidilydia@gmail.com ")<br />
+    @Html.Label("Address","Address: ")
+    @Html.Label("adress","Silverton, Pretoria 012")<br /><br />
+
+    <button onclick="location.href='@Url.Action("UpdateProf","Donation")'">Update Profile</button>
+</div><br /><br />
+
+<div style="border:2px solid black; padding:4px" class="jumbotron">
+    <h3>Restricted for Campaign owner:</h3>
+    <button onclick="location.href='@Url.Action("BankOrganisation","Donation")'">Donate To Organisation</button>
+</div>
+
+

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "UpdateProf";
+}
+
+<h2>Update Profile Details</h2>
+
+<div>
+    @Html.Label("Fname", "First Name: ")
+    @Html.TextBox("name", null, new { @class = "form-content", required = "required" })<br />
+    @Html.Label("Lname", "Last Name: ")
+    @Html.TextBox("surname", null, new { @class = "form-content", required = "required" })<br />
+    @Html.Label("email", "Email: ")
+    @Html.TextBox("email", null, new { @class = "form-content", required = "required" })<br />
+    @Html.Label("Address", "Address: ")
+    @Html.TextBox("Address",null,new { @class="form-content"});<br />
+    @Html.Label("password", "Enter Password to confirm: ")
+    @Html.Password("password", null, new { @class = "forn-content", required = "required" })<br />
+</div>
+<div>
+    <button onclick="location.href='@Url.Action("UserProfile","Donation")'">Update</button>
+    <button onclick="location.href='@Url.Action("UserProfile","Donation")'">Cancel</button>
+</div>

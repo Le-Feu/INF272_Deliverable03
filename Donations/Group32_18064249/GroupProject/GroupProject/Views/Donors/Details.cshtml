@@ -1,0 +1,67 @@
+﻿@model GroupProject.Models.Donor
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Donor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorSurname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorSurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonorProvince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonorProvince)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DonorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

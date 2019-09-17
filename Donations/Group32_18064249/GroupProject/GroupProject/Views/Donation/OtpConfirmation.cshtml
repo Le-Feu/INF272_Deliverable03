@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "OtpConfirmation";
+}
+
+<h2>Confirmation</h2>
+
+
+<div>
+    @Html.Label("OTP Confirmation Code")<br />
+    @Html.TextBox("otp", null, new { @class = "form-content" })<br /><br />
+    <button onclick="myFunction()">CONFIRM</button>
+</div>
+
+<script>
+    function myFunction()
+    {
+        alert("Sucessfully Confirmed");
+        window.location.href = '@Url.Action("ThankYou","Donation")';
+    }
+</script>

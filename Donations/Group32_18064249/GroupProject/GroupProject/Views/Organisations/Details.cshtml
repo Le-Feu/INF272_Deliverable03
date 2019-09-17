@@ -1,0 +1,51 @@
+﻿@model GroupProject.Models.Organisation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Organisation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganisationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganisationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrgarnisationAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrgarnisationAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganisationCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganisationCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganisationProvince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganisationProvince)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrganisationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
